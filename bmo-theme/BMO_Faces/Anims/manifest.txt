@@ -1,0 +1,66 @@
+Filetype: Flipper Animation Manifest
+Version: 1
+
+Name: BMO_happy
+Min butthurt: 0
+Max butthurt: 3
+Min level: 1
+Max level: 30
+Weight: 10
+
+Name: BMO_laugh
+Min butthurt: 0
+Max butthurt: 4
+Min level: 1
+Max level: 30
+Weight: 8
+
+Name: BMO_smile
+Min butthurt: 0
+Max butthurt: 6
+Min level: 1
+Max level: 30
+Weight: 9
+
+Name: BMO_oo
+Min butthurt: 2
+Max butthurt: 7
+Min level: 1
+Max level: 30
+Weight: 7
+
+Name: BMO_smirk
+Min butthurt: 4
+Max butthurt: 8
+Min level: 1
+Max level: 30
+Weight: 7
+
+Name: BMO_hmm
+Min butthurt: 6
+Max butthurt: 10
+Min level: 1
+Max level: 30
+Weight: 7
+
+Name: BMO_yawn
+Min butthurt: 7
+Max butthurt: 12
+Min level: 1
+Max level: 30
+Weight: 6
+
+Name: BMO_hng
+Min butthurt: 9
+Max butthurt: 13
+Min level: 1
+Max level: 30
+Weight: 6
+
+Name: BMO_angy
+Min butthurt: 11
+Max butthurt: 14
+Min level: 1
+Max level: 30
+Weight: 7
+

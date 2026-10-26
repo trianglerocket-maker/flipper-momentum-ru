@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+momentum-firmware/
+orig_u8g2_fonts.c

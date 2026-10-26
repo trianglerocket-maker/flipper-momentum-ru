@@ -1,0 +1,2516 @@
+[
+ {
+  "key": "saflip|Reading",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Reading"
+ },
+ {
+  "key": "saflip|Writing",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Writing"
+ },
+ {
+  "key": "saflip|Hold card next\\nto Flipper's back",
+  "app": "saflip",
+  "func": "popup_set_text",
+  "en": "Hold card next\\nto Flipper's back"
+ },
+ {
+  "key": "saflip|Done",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Done"
+ },
+ {
+  "key": "saflip|Emulating",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Emulating"
+ },
+ {
+  "key": "saflip|V.Keys",
+  "app": "saflip",
+  "func": "widget_add_button_element",
+  "en": "V.Keys"
+ },
+ {
+  "key": "saflip|Log",
+  "app": "saflip",
+  "func": "widget_add_button_element",
+  "en": "Log"
+ },
+ {
+  "key": "saflip|Options",
+  "app": "saflip",
+  "func": "widget_add_button_element",
+  "en": "Options"
+ },
+ {
+  "key": "saflip|Remove log entry?",
+  "app": "saflip",
+  "func": "dialog_ex_set_header",
+  "en": "Remove log entry?"
+ },
+ {
+  "key": "saflip|Cancel",
+  "app": "saflip",
+  "func": "dialog_ex_set_left_button_text",
+  "en": "Cancel"
+ },
+ {
+  "key": "saflip|Remove",
+  "app": "saflip",
+  "func": "dialog_ex_set_right_button_text",
+  "en": "Remove"
+ },
+ {
+  "key": "saflip|Save",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Save"
+ },
+ {
+  "key": "saflip|Save as NFC",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Save as NFC"
+ },
+ {
+  "key": "saflip|Emulate",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Emulate"
+ },
+ {
+  "key": "saflip|Write",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Write"
+ },
+ {
+  "key": "saflip|Edit",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Edit"
+ },
+ {
+  "key": "saflip|Change UID",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Change UID"
+ },
+ {
+  "key": "saflip|Info",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Info"
+ },
+ {
+  "key": "saflip|Failed to read!",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Failed to read!"
+ },
+ {
+  "key": "saflip|Lost card!",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Lost card!"
+ },
+ {
+  "key": "saflip|Don't move",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Don't move"
+ },
+ {
+  "key": "saflip|Invalid card!",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Invalid card!"
+ },
+ {
+  "key": "saflip|Failed to\\nparse data.",
+  "app": "saflip",
+  "func": "popup_set_text",
+  "en": "Failed to\\nparse data."
+ },
+ {
+  "key": "saflip|Name the card",
+  "app": "saflip",
+  "func": "text_input_set_header_text",
+  "en": "Name the card"
+ },
+ {
+  "key": "saflip|Saved!",
+  "app": "saflip",
+  "func": "popup_set_header",
+  "en": "Saved!"
+ },
+ {
+  "key": "saflip|Read Card",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Read Card"
+ },
+ {
+  "key": "saflip|Saved",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Saved"
+ },
+ {
+  "key": "saflip|Create",
+  "app": "saflip",
+  "func": "submenu_add_item",
+  "en": "Create"
+ },
+ {
+  "key": "saflip|Lock ID",
+  "app": "saflip",
+  "func": "number_input_set_header_text",
+  "en": "Lock ID"
+ },
+ {
+  "key": "saflip|Yes",
+  "app": "saflip",
+  "func": "variable_item_set_current_value_text",
+  "en": "Yes"
+ },
+ {
+  "key": "saflip|No",
+  "app": "saflip",
+  "func": "variable_item_set_current_value_text",
+  "en": "No"
+ },
+ {
+  "key": "saflip|Inhibit Others?",
+  "app": "saflip",
+  "func": "variable_item_list_add",
+  "en": "Inhibit Others?"
+ },
+ {
+  "key": "saflip|Use Opt. Feat.?",
+  "app": "saflip",
+  "func": "variable_item_list_add",
+  "en": "Use Opt. Feat.?"
+ },
+ {
+  "key": "saflip|Creation",
+  "app": "saflip",
+  "func": "variable_item_list_add",
+  "en": "Creation"
+ },
+ {
+  "key": "saflip|Remove variable key?",
+  "app": "saflip",
+  "func": "dialog_ex_set_header",
+  "en": "Remove variable key?"
+ },
+ {
+  "key": "saflip|Add variable key...",
+  "app": "saflip",
+  "func": "submenu_add_item_ex",
+  "en": "Add variable key..."
+ },
+ {
+  "key": "scorched_tanks|player1",
+  "app": "scorched_tanks",
+  "func": "canvas_draw_str",
+  "en": "player1"
+ },
+ {
+  "key": "scorched_tanks|player2",
+  "app": "scorched_tanks",
+  "func": "canvas_draw_str",
+  "en": "player2"
+ },
+ {
+  "key": "seader|APDU Runner",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "APDU Runner"
+ },
+ {
+  "key": "seader|APDU Runner\\nSuccess",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "APDU Runner\\nSuccess"
+ },
+ {
+  "key": "seader|APDU Runner\\nError",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "APDU Runner\\nError"
+ },
+ {
+  "key": "seader|Save",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Save"
+ },
+ {
+  "key": "seader|Save Picopass",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Save Picopass"
+ },
+ {
+  "key": "seader|Save RFID",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Save RFID"
+ },
+ {
+  "key": "seader|Save SR",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Save SR"
+ },
+ {
+  "key": "seader|Save MFC",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Save MFC"
+ },
+ {
+  "key": "seader|Back",
+  "app": "seader",
+  "func": "widget_add_button_element",
+  "en": "Back"
+ },
+ {
+  "key": "seader|Parse",
+  "app": "seader",
+  "func": "widget_add_button_element",
+  "en": "Parse"
+ },
+ {
+  "key": "seader|Delete",
+  "app": "seader",
+  "func": "widget_add_button_element",
+  "en": "Delete"
+ },
+ {
+  "key": "seader|Deleted",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Deleted"
+ },
+ {
+  "key": "seader|Detecting\\n14a\\ncard",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Detecting\\n14a\\ncard"
+ },
+ {
+  "key": "seader|DON'T\\nMOVE",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "DON'T\\nMOVE"
+ },
+ {
+  "key": "seader|Retry",
+  "app": "seader",
+  "func": "widget_add_button_element",
+  "en": "Retry"
+ },
+ {
+  "key": "seader|More",
+  "app": "seader",
+  "func": "widget_add_button_element",
+  "en": "More"
+ },
+ {
+  "key": "seader|Detecting\\nConfig\\ncard",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Detecting\\nConfig\\ncard"
+ },
+ {
+  "key": "seader|Detecting\\nMFC\\ncard",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Detecting\\nMFC\\ncard"
+ },
+ {
+  "key": "seader|Detecting\\npicopass\\ncard",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Detecting\\npicopass\\ncard"
+ },
+ {
+  "key": "seader|No SAM: Retry",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "No SAM: Retry"
+ },
+ {
+  "key": "seader|Saved",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Saved"
+ },
+ {
+  "key": "seader|Read Picopass",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Read Picopass"
+ },
+ {
+  "key": "seader|Read 14443A",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Read 14443A"
+ },
+ {
+  "key": "seader|Read MFC",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Read MFC"
+ },
+ {
+  "key": "seader|Read Config Card",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Read Config Card"
+ },
+ {
+  "key": "seader|Run APDUs",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Run APDUs"
+ },
+ {
+  "key": "seader|Wrong ATR: Retry",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Wrong ATR: Retry"
+ },
+ {
+  "key": "seader|Name the credential",
+  "app": "seader",
+  "func": "text_input_set_header_text",
+  "en": "Name the credential"
+ },
+ {
+  "key": "seader|Saved!",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Saved!"
+ },
+ {
+  "key": "seader|Info",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Info"
+ },
+ {
+  "key": "seader|Virtual",
+  "app": "seader",
+  "func": "submenu_add_item",
+  "en": "Virtual"
+ },
+ {
+  "key": "seader|Detecting SAM",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Detecting SAM"
+ },
+ {
+  "key": "seader|Processing\\nvirtual\\npicopass",
+  "app": "seader",
+  "func": "popup_set_header",
+  "en": "Processing\\nvirtual\\npicopass"
+ },
+ {
+  "key": "sentry_safe|SENTRY SAFE",
+  "app": "sentry_safe",
+  "func": "canvas_draw_str_aligned",
+  "en": "SENTRY SAFE"
+ },
+ {
+  "key": "sentry_safe|Hold OK = Help",
+  "app": "sentry_safe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Hold OK = Help"
+ },
+ {
+  "key": "sentry_safe|Press OK = Send",
+  "app": "sentry_safe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Press OK = Send"
+ },
+ {
+  "key": "seos|Starting...",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Starting..."
+ },
+ {
+  "key": "seos|Init",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Init"
+ },
+ {
+  "key": "seos|Scanning...",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Scanning..."
+ },
+ {
+  "key": "seos|Device\\nfound",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Device\\nfound"
+ },
+ {
+  "key": "seos|Connected",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Connected"
+ },
+ {
+  "key": "seos|Auth'd",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Auth'd"
+ },
+ {
+  "key": "seos|SIO\\nRequested",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "SIO\\nRequested"
+ },
+ {
+  "key": "seos|Starting",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Starting"
+ },
+ {
+  "key": "seos|Advertising",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Advertising"
+ },
+ {
+  "key": "seos|Back",
+  "app": "seos",
+  "func": "widget_add_button_element",
+  "en": "Back"
+ },
+ {
+  "key": "seos|Delete",
+  "app": "seos",
+  "func": "widget_add_button_element",
+  "en": "Delete"
+ },
+ {
+  "key": "seos|Deleted",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Deleted"
+ },
+ {
+  "key": "seos|Emulating",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Emulating"
+ },
+ {
+  "key": "seos|AID\\nSelected",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "AID\\nSelected"
+ },
+ {
+  "key": "seos|ADF\\nMatched",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "ADF\\nMatched"
+ },
+ {
+  "key": "seos|Saved",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Saved"
+ },
+ {
+  "key": "seos|Read NFC",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Read NFC"
+ },
+ {
+  "key": "seos|Start BLE Reader",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Start BLE Reader"
+ },
+ {
+  "key": "seos|Scanners >",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Scanners >"
+ },
+ {
+  "key": "seos|About",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "About"
+ },
+ {
+  "key": "seos|Saved (Seader)",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Saved (Seader)"
+ },
+ {
+  "key": "seos|Migrate Keys",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Migrate Keys"
+ },
+ {
+  "key": "seos|Do it",
+  "app": "seos",
+  "func": "widget_add_button_element",
+  "en": "Do it"
+ },
+ {
+  "key": "seos|Reading",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Reading"
+ },
+ {
+  "key": "seos|Retry",
+  "app": "seos",
+  "func": "widget_add_button_element",
+  "en": "Retry"
+ },
+ {
+  "key": "seos|Save",
+  "app": "seos",
+  "func": "widget_add_button_element",
+  "en": "Save"
+ },
+ {
+  "key": "seos|Emulate",
+  "app": "seos",
+  "func": "widget_add_button_element",
+  "en": "Emulate"
+ },
+ {
+  "key": "seos|Name the card",
+  "app": "seos",
+  "func": "text_input_set_header_text",
+  "en": "Name the card"
+ },
+ {
+  "key": "seos|Saved!",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "Saved!"
+ },
+ {
+  "key": "seos|NFC Emulate",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "NFC Emulate"
+ },
+ {
+  "key": "seos|BLE Emulate Central",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "BLE Emulate Central"
+ },
+ {
+  "key": "seos|BLE Emulate Peripheral",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "BLE Emulate Peripheral"
+ },
+ {
+  "key": "seos|Info",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Info"
+ },
+ {
+  "key": "seos|Start BLE Reader Scanner",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Start BLE Reader Scanner"
+ },
+ {
+  "key": "seos|Start BLE Cred Scanner",
+  "app": "seos",
+  "func": "submenu_add_item",
+  "en": "Start BLE Cred Scanner"
+ },
+ {
+  "key": "seos|NO KEYS",
+  "app": "seos",
+  "func": "popup_set_header",
+  "en": "NO KEYS"
+ },
+ {
+  "key": "seos|Using all zero keys",
+  "app": "seos",
+  "func": "popup_set_text",
+  "en": "Using all zero keys"
+ },
+ {
+  "key": "signal_generator|GPIO Pin",
+  "app": "signal_generator",
+  "func": "variable_item_list_add",
+  "en": "GPIO Pin"
+ },
+ {
+  "key": "signal_generator|Frequency",
+  "app": "signal_generator",
+  "func": "variable_item_list_add",
+  "en": "Frequency"
+ },
+ {
+  "key": "signal_generator|Freq. divider",
+  "app": "signal_generator",
+  "func": "variable_item_list_add",
+  "en": "Freq. divider"
+ },
+ {
+  "key": "signal_generator|PWM Generator",
+  "app": "signal_generator",
+  "func": "submenu_add_item",
+  "en": "PWM Generator"
+ },
+ {
+  "key": "signal_generator|Clock Generator",
+  "app": "signal_generator",
+  "func": "submenu_add_item",
+  "en": "Clock Generator"
+ },
+ {
+  "key": "simonsays|Welcome to Simon Says",
+  "app": "simonsays",
+  "func": "canvas_draw_str_aligned",
+  "en": "Welcome to Simon Says"
+ },
+ {
+  "key": "simonsays|Press OK to start",
+  "app": "simonsays",
+  "func": "canvas_draw_str_aligned",
+  "en": "Press OK to start"
+ },
+ {
+  "key": "simonsays|New High Score!",
+  "app": "simonsays",
+  "func": "canvas_draw_str_aligned",
+  "en": "New High Score!"
+ },
+ {
+  "key": "simonsays|High Score",
+  "app": "simonsays",
+  "func": "canvas_draw_str_aligned",
+  "en": "High Score"
+ },
+ {
+  "key": "simonsays|GAME OVER",
+  "app": "simonsays",
+  "func": "canvas_draw_str_aligned",
+  "en": "GAME OVER"
+ },
+ {
+  "key": "simonsays|Press OK to restart",
+  "app": "simonsays",
+  "func": "canvas_draw_str_aligned",
+  "en": "Press OK to restart"
+ },
+ {
+  "key": "simultaneous_rfid_reader|UHF RFID Reader",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_set_header",
+  "en": "UHF RFID Reader"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Read",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Read"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Saved",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Saved"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Configure",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Configure"
+ },
+ {
+  "key": "simultaneous_rfid_reader|About",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "About"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Saved EPCs",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_set_header",
+  "en": "Saved EPCs"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Connect\\nTo Reader\\nFirst!",
+  "app": "simultaneous_rfid_reader",
+  "func": "popup_set_header",
+  "en": "Connect\\nTo Reader\\nFirst!"
+ },
+ {
+  "key": "simultaneous_rfid_reader|LOCKED",
+  "app": "simultaneous_rfid_reader",
+  "func": "variable_item_set_current_value_text",
+  "en": "LOCKED"
+ },
+ {
+  "key": "simultaneous_rfid_reader| Confirm EPC Deletion!",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": " Confirm EPC Deletion!"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Name:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "Name:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|EPC Index:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "EPC Index:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|EPC:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "EPC:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Cancel",
+  "app": "simultaneous_rfid_reader",
+  "func": "elements_button_left",
+  "en": "Cancel"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Confirm",
+  "app": "simultaneous_rfid_reader",
+  "func": "elements_button_right",
+  "en": "Confirm"
+ },
+ {
+  "key": "simultaneous_rfid_reader| Successfully Deleted!",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": " Successfully Deleted!"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Exit",
+  "app": "simultaneous_rfid_reader",
+  "func": "elements_button_center",
+  "en": "Exit"
+ },
+ {
+  "key": "simultaneous_rfid_reader|            EPC Info:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "            EPC Info:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|EPC: ",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "EPC: "
+ },
+ {
+  "key": "simultaneous_rfid_reader|Reserved: ",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "Reserved: "
+ },
+ {
+  "key": "simultaneous_rfid_reader|TID: ",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "TID: "
+ },
+ {
+  "key": "simultaneous_rfid_reader|User Mem: ",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "User Mem: "
+ },
+ {
+  "key": "simultaneous_rfid_reader|Setting\\nKill\\nPassword",
+  "app": "simultaneous_rfid_reader",
+  "func": "popup_set_header",
+  "en": "Setting\\nKill\\nPassword"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Killing\\nUHF\\nTag!",
+  "app": "simultaneous_rfid_reader",
+  "func": "popup_set_header",
+  "en": "Killing\\nUHF\\nTag!"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Kill Tag Options: ",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_set_header",
+  "en": "Kill Tag Options: "
+ },
+ {
+  "key": "simultaneous_rfid_reader|Set Kill Password",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Set Kill Password"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Kill Tag (Permanent)",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Kill Tag (Permanent)"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Setting\\nAccess\\nPassword",
+  "app": "simultaneous_rfid_reader",
+  "func": "popup_set_header",
+  "en": "Setting\\nAccess\\nPassword"
+ },
+ {
+  "key": "simultaneous_rfid_reader|           Read Menu:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "           Read Menu:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|# EPCs:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "# EPCs:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Cur Tag:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "Cur Tag:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|CRC: ",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "CRC: "
+ },
+ {
+  "key": "simultaneous_rfid_reader|PC:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "PC:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Prev",
+  "app": "simultaneous_rfid_reader",
+  "func": "elements_button_left",
+  "en": "Prev"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Start",
+  "app": "simultaneous_rfid_reader",
+  "func": "elements_button_center",
+  "en": "Start"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Next",
+  "app": "simultaneous_rfid_reader",
+  "func": "elements_button_right",
+  "en": "Next"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Stop",
+  "app": "simultaneous_rfid_reader",
+  "func": "elements_button_center",
+  "en": "Stop"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Save EPC",
+  "app": "simultaneous_rfid_reader",
+  "func": "text_input_set_header_text",
+  "en": "Save EPC"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Rename EPC",
+  "app": "simultaneous_rfid_reader",
+  "func": "text_input_set_header_text",
+  "en": "Rename EPC"
+ },
+ {
+  "key": "simultaneous_rfid_reader|EPC Actions",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_set_header",
+  "en": "EPC Actions"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Tag Data",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Tag Data"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Rename",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Rename"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Write",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Write"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Lock",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Lock"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Kill",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Kill"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Delete",
+  "app": "simultaneous_rfid_reader",
+  "func": "submenu_add_item",
+  "en": "Delete"
+ },
+ {
+  "key": "simultaneous_rfid_reader|           Write Menu:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "           Write Menu:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Write Mode:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "Write Mode:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|CRC:",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "CRC:"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Write Status: ",
+  "app": "simultaneous_rfid_reader",
+  "func": "canvas_draw_str",
+  "en": "Write Status: "
+ },
+ {
+  "key": "simultaneous_rfid_reader|EPC Value",
+  "app": "simultaneous_rfid_reader",
+  "func": "text_input_set_header_text",
+  "en": "EPC Value"
+ },
+ {
+  "key": "simultaneous_rfid_reader|Reserved Memory Bank",
+  "app": "simultaneous_rfid_reader",
+  "func": "text_input_set_header_text",
+  "en": "Reserved Memory Bank"
+ },
+ {
+  "key": "simultaneous_rfid_reader|User Memory Bank",
+  "app": "simultaneous_rfid_reader",
+  "func": "text_input_set_header_text",
+  "en": "User Memory Bank"
+ },
+ {
+  "key": "simultaneous_rfid_reader|TID Memory Bank",
+  "app": "simultaneous_rfid_reader",
+  "func": "text_input_set_header_text",
+  "en": "TID Memory Bank"
+ },
+ {
+  "key": "slots|Slots",
+  "app": "slots",
+  "func": "canvas_draw_str",
+  "en": "Slots"
+ },
+ {
+  "key": "slots|Bet:",
+  "app": "slots",
+  "func": "canvas_draw_str",
+  "en": "Bet:"
+ },
+ {
+  "key": "slots|You lose ;(",
+  "app": "slots",
+  "func": "canvas_draw_str",
+  "en": "You lose ;("
+ },
+ {
+  "key": "snake_2|You WON!",
+  "app": "snake_2",
+  "func": "canvas_draw_str_aligned",
+  "en": "You WON!"
+ },
+ {
+  "key": "snake_2|Game Over",
+  "app": "snake_2",
+  "func": "canvas_draw_str_aligned",
+  "en": "Game Over"
+ },
+ {
+  "key": "snake_2|Pause",
+  "app": "snake_2",
+  "func": "canvas_draw_str_aligned",
+  "en": "Pause"
+ },
+ {
+  "key": "snake_2|Hold        to Exit App",
+  "app": "snake_2",
+  "func": "canvas_draw_str_aligned",
+  "en": "Hold        to Exit App"
+ },
+ {
+  "key": "snake_2|Endless mode   OFF",
+  "app": "snake_2",
+  "func": "canvas_draw_str_aligned",
+  "en": "Endless mode   OFF"
+ },
+ {
+  "key": "snake_2|Endless mode",
+  "app": "snake_2",
+  "func": "canvas_draw_str_aligned",
+  "en": "Endless mode"
+ },
+ {
+  "key": "snake_2|ON",
+  "app": "snake_2",
+  "func": "canvas_draw_str_aligned",
+  "en": "ON"
+ },
+ {
+  "key": "solitaire|Congratulations!",
+  "app": "solitaire",
+  "func": "canvas_draw_str_aligned",
+  "en": "Congratulations!"
+ },
+ {
+  "key": "solitaire|Solve time:",
+  "app": "solitaire",
+  "func": "canvas_draw_str_aligned",
+  "en": "Solve time:"
+ },
+ {
+  "key": "space_playground|Gravity",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Gravity"
+ },
+ {
+  "key": "space_playground|Planets",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Planets"
+ },
+ {
+  "key": "space_playground|Asteroid Interval",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Asteroid Interval"
+ },
+ {
+  "key": "space_playground|Grid speed",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Grid speed"
+ },
+ {
+  "key": "space_playground|Grid spacing",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Grid spacing"
+ },
+ {
+  "key": "space_playground|Trail duration",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Trail duration"
+ },
+ {
+  "key": "space_playground|Asteroid speed",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Asteroid speed"
+ },
+ {
+  "key": "space_playground|Debri count",
+  "app": "space_playground",
+  "func": "variable_item_list_add",
+  "en": "Debri count"
+ },
+ {
+  "key": "spi_mem_manager|Retry",
+  "app": "spi_mem_manager",
+  "func": "widget_add_button_element",
+  "en": "Retry"
+ },
+ {
+  "key": "spi_mem_manager|Detected",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "Detected"
+ },
+ {
+  "key": "spi_mem_manager|unknown SPI chip",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "unknown SPI chip"
+ },
+ {
+  "key": "spi_mem_manager|Detected SPI chip",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "Detected SPI chip"
+ },
+ {
+  "key": "spi_mem_manager|Back",
+  "app": "spi_mem_manager",
+  "func": "widget_add_button_element",
+  "en": "Back"
+ },
+ {
+  "key": "spi_mem_manager|SPI chip error",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "SPI chip error"
+ },
+ {
+  "key": "spi_mem_manager|Error while\\ncommunicating\\nwith chip",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_multiline_element",
+  "en": "Error while\\ncommunicating\\nwith chip"
+ },
+ {
+  "key": "spi_mem_manager|Cancel",
+  "app": "spi_mem_manager",
+  "func": "widget_add_button_element",
+  "en": "Cancel"
+ },
+ {
+  "key": "spi_mem_manager|Delete",
+  "app": "spi_mem_manager",
+  "func": "widget_add_button_element",
+  "en": "Delete"
+ },
+ {
+  "key": "spi_mem_manager|Erasing SPI chip",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "Erasing SPI chip"
+ },
+ {
+  "key": "spi_mem_manager|Please be patient",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "Please be patient"
+ },
+ {
+  "key": "spi_mem_manager|File info",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "File info"
+ },
+ {
+  "key": "spi_mem_manager|Name the dump",
+  "app": "spi_mem_manager",
+  "func": "text_input_set_header_text",
+  "en": "Name the dump"
+ },
+ {
+  "key": "spi_mem_manager|Write",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "Write"
+ },
+ {
+  "key": "spi_mem_manager|Compare",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "Compare"
+ },
+ {
+  "key": "spi_mem_manager|Info",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "Info"
+ },
+ {
+  "key": "spi_mem_manager|Choose chip model",
+  "app": "spi_mem_manager",
+  "func": "submenu_set_header",
+  "en": "Choose chip model"
+ },
+ {
+  "key": "spi_mem_manager|Choose chip vendor",
+  "app": "spi_mem_manager",
+  "func": "submenu_set_header",
+  "en": "Choose chip vendor"
+ },
+ {
+  "key": "spi_mem_manager|Read",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "Read"
+ },
+ {
+  "key": "spi_mem_manager|Saved",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "Saved"
+ },
+ {
+  "key": "spi_mem_manager|Erase",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "Erase"
+ },
+ {
+  "key": "spi_mem_manager|Wiring",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "Wiring"
+ },
+ {
+  "key": "spi_mem_manager|About",
+  "app": "spi_mem_manager",
+  "func": "submenu_add_item",
+  "en": "About"
+ },
+ {
+  "key": "spi_mem_manager|Storage error",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "Storage error"
+ },
+ {
+  "key": "spi_mem_manager|Error while\\nworking with\\nfilesystem",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_multiline_element",
+  "en": "Error while\\nworking with\\nfilesystem"
+ },
+ {
+  "key": "spi_mem_manager|Success!",
+  "app": "spi_mem_manager",
+  "func": "popup_set_header",
+  "en": "Success!"
+ },
+ {
+  "key": "spi_mem_manager|Verification error",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "Verification error"
+ },
+ {
+  "key": "spi_mem_manager|Data mismatch",
+  "app": "spi_mem_manager",
+  "func": "widget_add_string_element",
+  "en": "Data mismatch"
+ },
+ {
+  "key": "spi_mem_manager|Detecting",
+  "app": "spi_mem_manager",
+  "func": "canvas_draw_str_aligned",
+  "en": "Detecting"
+ },
+ {
+  "key": "spi_mem_manager|SPI chip...",
+  "app": "spi_mem_manager",
+  "func": "canvas_draw_str_aligned",
+  "en": "SPI chip..."
+ },
+ {
+  "key": "spi_mem_manager|Reading dump",
+  "app": "spi_mem_manager",
+  "func": "canvas_draw_str_aligned",
+  "en": "Reading dump"
+ },
+ {
+  "key": "spi_mem_manager|Size clamped to chip!",
+  "app": "spi_mem_manager",
+  "func": "canvas_draw_str_aligned",
+  "en": "Size clamped to chip!"
+ },
+ {
+  "key": "spi_mem_manager|Size clamped to file!",
+  "app": "spi_mem_manager",
+  "func": "canvas_draw_str_aligned",
+  "en": "Size clamped to file!"
+ },
+ {
+  "key": "spi_mem_manager|Verifying dump",
+  "app": "spi_mem_manager",
+  "func": "canvas_draw_str_aligned",
+  "en": "Verifying dump"
+ },
+ {
+  "key": "spi_mem_manager|Skip",
+  "app": "spi_mem_manager",
+  "func": "elements_button_center",
+  "en": "Skip"
+ },
+ {
+  "key": "spi_mem_manager|Writing dump",
+  "app": "spi_mem_manager",
+  "func": "canvas_draw_str_aligned",
+  "en": "Writing dump"
+ },
+ {
+  "key": "spi_terminal|Press OK for help",
+  "app": "spi_terminal",
+  "func": "variable_item_list_add",
+  "en": "Press OK for help"
+ },
+ {
+  "key": "spi_terminal|Config",
+  "app": "spi_terminal",
+  "func": "dialog_ex_set_left_button_text",
+  "en": "Config"
+ },
+ {
+  "key": "spi_terminal|Run",
+  "app": "spi_terminal",
+  "func": "dialog_ex_set_center_button_text",
+  "en": "Run"
+ },
+ {
+  "key": "spi_terminal|About",
+  "app": "spi_terminal",
+  "func": "dialog_ex_set_right_button_text",
+  "en": "About"
+ },
+ {
+  "key": "sub_analyzer|Sub Analyzer",
+  "app": "sub_analyzer",
+  "func": "popup_set_header",
+  "en": "Sub Analyzer"
+ },
+ {
+  "key": "sub_analyzer|RocketGod\\nbetaskynet.com",
+  "app": "sub_analyzer",
+  "func": "popup_set_text",
+  "en": "RocketGod\\nbetaskynet.com"
+ },
+ {
+  "key": "sub_analyzer|Select .sub file",
+  "app": "sub_analyzer",
+  "func": "submenu_add_item",
+  "en": "Select .sub file"
+ },
+ {
+  "key": "sub_analyzer|About",
+  "app": "sub_analyzer",
+  "func": "submenu_add_item",
+  "en": "About"
+ },
+ {
+  "key": "subghz_bruteforcer|Name of file",
+  "app": "subghz_bruteforcer",
+  "func": "text_input_set_header_text",
+  "en": "Name of file"
+ },
+ {
+  "key": "subghz_bruteforcer|Saved!",
+  "app": "subghz_bruteforcer",
+  "func": "popup_set_header",
+  "en": "Saved!"
+ },
+ {
+  "key": "subghz_bruteforcer|TimeDelay",
+  "app": "subghz_bruteforcer",
+  "func": "variable_item_list_add",
+  "en": "TimeDelay"
+ },
+ {
+  "key": "subghz_bruteforcer|Repeats",
+  "app": "subghz_bruteforcer",
+  "func": "variable_item_list_add",
+  "en": "Repeats"
+ },
+ {
+  "key": "subghz_bruteforcer|Te",
+  "app": "subghz_bruteforcer",
+  "func": "variable_item_list_add",
+  "en": "Te"
+ },
+ {
+  "key": "subghz_bruteforcer|PT2262Code",
+  "app": "subghz_bruteforcer",
+  "func": "variable_item_list_add",
+  "en": "PT2262Code"
+ },
+ {
+  "key": "subghz_bruteforcer|Show Extra",
+  "app": "subghz_bruteforcer",
+  "func": "variable_item_list_add",
+  "en": "Show Extra"
+ },
+ {
+  "key": "subghz_bruteforcer|Start",
+  "app": "subghz_bruteforcer",
+  "func": "elements_button_center",
+  "en": "Start"
+ },
+ {
+  "key": "subghz_bruteforcer|Save",
+  "app": "subghz_bruteforcer",
+  "func": "elements_button_up",
+  "en": "Save"
+ },
+ {
+  "key": "subghz_bruteforcer|Resend",
+  "app": "subghz_bruteforcer",
+  "func": "elements_button_down",
+  "en": "Resend"
+ },
+ {
+  "key": "subghz_bruteforcer|repeats",
+  "app": "subghz_bruteforcer",
+  "func": "canvas_draw_str",
+  "en": "repeats"
+ },
+ {
+  "key": "subghz_bruteforcer|Stop",
+  "app": "subghz_bruteforcer",
+  "func": "elements_button_center",
+  "en": "Stop"
+ },
+ {
+  "key": "subghz_bruteforcer|Please select values to calc:",
+  "app": "subghz_bruteforcer",
+  "func": "canvas_draw_str_aligned",
+  "en": "Please select values to calc:"
+ },
+ {
+  "key": "subghz_bruteforcer|Select",
+  "app": "subghz_bruteforcer",
+  "func": "elements_button_center",
+  "en": "Select"
+ },
+ {
+  "key": "subghz_bruteforcer|One byte",
+  "app": "subghz_bruteforcer",
+  "func": "elements_button_up",
+  "en": "One byte"
+ },
+ {
+  "key": "subghz_bruteforcer|Two bytes",
+  "app": "subghz_bruteforcer",
+  "func": "elements_button_up",
+  "en": "Two bytes"
+ },
+ {
+  "key": "subghz_playlist|No playlist loaded",
+  "app": "subghz_playlist",
+  "func": "canvas_draw_str_aligned",
+  "en": "No playlist loaded"
+ },
+ {
+  "key": "subghz_playlist|Start",
+  "app": "subghz_playlist",
+  "func": "canvas_draw_str_aligned",
+  "en": "Start"
+ },
+ {
+  "key": "subghz_playlist|R-",
+  "app": "subghz_playlist",
+  "func": "canvas_draw_str_aligned",
+  "en": "R-"
+ },
+ {
+  "key": "subghz_playlist|R+",
+  "app": "subghz_playlist",
+  "func": "canvas_draw_str_aligned",
+  "en": "R+"
+ },
+ {
+  "key": "subghz_playlist_creator|[+] Add file",
+  "app": "subghz_playlist_creator",
+  "func": "submenu_add_item",
+  "en": "[+] Add file"
+ },
+ {
+  "key": "subghz_playlist_creator|[s] Save playlist",
+  "app": "subghz_playlist_creator",
+  "func": "submenu_add_item",
+  "en": "[s] Save playlist"
+ },
+ {
+  "key": "subghz_playlist_creator|File exists",
+  "app": "subghz_playlist_creator",
+  "func": "dialog_ex_set_header",
+  "en": "File exists"
+ },
+ {
+  "key": "subghz_playlist_creator|Overwrite?",
+  "app": "subghz_playlist_creator",
+  "func": "dialog_ex_set_text",
+  "en": "Overwrite?"
+ },
+ {
+  "key": "subghz_playlist_creator|No",
+  "app": "subghz_playlist_creator",
+  "func": "dialog_ex_set_left_button_text",
+  "en": "No"
+ },
+ {
+  "key": "subghz_playlist_creator|Yes",
+  "app": "subghz_playlist_creator",
+  "func": "dialog_ex_set_right_button_text",
+  "en": "Yes"
+ },
+ {
+  "key": "subghz_playlist_creator|SubGhz Playlist Creator",
+  "app": "subghz_playlist_creator",
+  "func": "popup_set_header",
+  "en": "SubGhz Playlist Creator"
+ },
+ {
+  "key": "subghz_playlist_creator|Welcome!",
+  "app": "subghz_playlist_creator",
+  "func": "popup_set_text",
+  "en": "Welcome!"
+ },
+ {
+  "key": "subghz_playlist_creator|Enter playlist name",
+  "app": "subghz_playlist_creator",
+  "func": "text_input_set_header_text",
+  "en": "Enter playlist name"
+ },
+ {
+  "key": "subghz_playlist_creator|Create",
+  "app": "subghz_playlist_creator",
+  "func": "submenu_add_item",
+  "en": "Create"
+ },
+ {
+  "key": "subghz_playlist_creator|Edit",
+  "app": "subghz_playlist_creator",
+  "func": "submenu_add_item",
+  "en": "Edit"
+ },
+ {
+  "key": "subghz_playlist_creator|Exit",
+  "app": "subghz_playlist_creator",
+  "func": "submenu_add_item",
+  "en": "Exit"
+ },
+ {
+  "key": "subghz_remote|Label name",
+  "app": "subghz_remote",
+  "func": "text_input_set_header_text",
+  "en": "Label name"
+ },
+ {
+  "key": "subghz_remote|Empty Label Name",
+  "app": "subghz_remote",
+  "func": "widget_add_string_element",
+  "en": "Empty Label Name"
+ },
+ {
+  "key": "subghz_remote|Continue?",
+  "app": "subghz_remote",
+  "func": "widget_add_string_element",
+  "en": "Continue?"
+ },
+ {
+  "key": "subghz_remote|Ok",
+  "app": "subghz_remote",
+  "func": "widget_add_button_element",
+  "en": "Ok"
+ },
+ {
+  "key": "subghz_remote|Back",
+  "app": "subghz_remote",
+  "func": "widget_add_button_element",
+  "en": "Back"
+ },
+ {
+  "key": "subghz_remote|Changes are not saved",
+  "app": "subghz_remote",
+  "func": "widget_add_string_element",
+  "en": "Changes are not saved"
+ },
+ {
+  "key": "subghz_remote|do you want to exit?",
+  "app": "subghz_remote",
+  "func": "widget_add_string_element",
+  "en": "do you want to exit?"
+ },
+ {
+  "key": "subghz_remote|Yes",
+  "app": "subghz_remote",
+  "func": "widget_add_button_element",
+  "en": "Yes"
+ },
+ {
+  "key": "subghz_remote|No",
+  "app": "subghz_remote",
+  "func": "widget_add_button_element",
+  "en": "No"
+ },
+ {
+  "key": "subghz_remote|Saved!",
+  "app": "subghz_remote",
+  "func": "popup_set_header",
+  "en": "Saved!"
+ },
+ {
+  "key": "subghz_remote|Edit Label",
+  "app": "subghz_remote",
+  "func": "variable_item_list_add",
+  "en": "Edit Label"
+ },
+ {
+  "key": "subghz_remote|Edit File",
+  "app": "subghz_remote",
+  "func": "variable_item_list_add",
+  "en": "Edit File"
+ },
+ {
+  "key": "subghz_remote|Button",
+  "app": "subghz_remote",
+  "func": "variable_item_list_add",
+  "en": "Button"
+ },
+ {
+  "key": "subghz_remote|Clear Slot",
+  "app": "subghz_remote",
+  "func": "variable_item_list_add",
+  "en": "Clear Slot"
+ },
+ {
+  "key": "subghz_remote|Map file Name",
+  "app": "subghz_remote",
+  "func": "text_input_set_header_text",
+  "en": "Map file Name"
+ },
+ {
+  "key": "subghz_remote|Exit",
+  "app": "subghz_remote",
+  "func": "widget_add_button_element",
+  "en": "Exit"
+ },
+ {
+  "key": "subghz_remote|Continue",
+  "app": "subghz_remote",
+  "func": "widget_add_button_element",
+  "en": "Continue"
+ },
+ {
+  "key": "subghz_remote|Not official FW",
+  "app": "subghz_remote",
+  "func": "widget_add_string_element",
+  "en": "Not official FW"
+ },
+ {
+  "key": "subghz_remote|You are using custom firmware\\nPlease download a compatible\\nversion of the application",
+  "app": "subghz_remote",
+  "func": "widget_add_string_multiline_element",
+  "en": "You are using custom firmware\\nPlease download a compatible\\nversion of the application"
+ },
+ {
+  "key": "subghz_remote|Accept",
+  "app": "subghz_remote",
+  "func": "widget_add_button_element",
+  "en": "Accept"
+ },
+ {
+  "key": "subghz_remote|Yes, I understand that\\nthe application can\\nbreak my subghz key file",
+  "app": "subghz_remote",
+  "func": "widget_add_string_multiline_element",
+  "en": "Yes, I understand that\\nthe application can\\nbreak my subghz key file"
+ },
+ {
+  "key": "subghz_remote|ERROR",
+  "app": "subghz_remote",
+  "func": "popup_set_header",
+  "en": "ERROR"
+ },
+ {
+  "key": "subghz_remote|Bad frequency",
+  "app": "subghz_remote",
+  "func": "popup_set_text",
+  "en": "Bad frequency"
+ },
+ {
+  "key": "subghz_remote|Bad modulation",
+  "app": "subghz_remote",
+  "func": "popup_set_text",
+  "en": "Bad modulation"
+ },
+ {
+  "key": "subghz_remote|Unsupported protocol",
+  "app": "subghz_remote",
+  "func": "popup_set_text",
+  "en": "Unsupported protocol"
+ },
+ {
+  "key": "subghz_remote|Open Map File",
+  "app": "subghz_remote",
+  "func": "submenu_add_item",
+  "en": "Open Map File"
+ },
+ {
+  "key": "subghz_remote|Remote_Debug",
+  "app": "subghz_remote",
+  "func": "submenu_add_item",
+  "en": "Remote_Debug"
+ },
+ {
+  "key": "subghz_remote|Edit Map File",
+  "app": "subghz_remote",
+  "func": "submenu_add_item",
+  "en": "Edit Map File"
+ },
+ {
+  "key": "subghz_remote|New Map File",
+  "app": "subghz_remote",
+  "func": "submenu_add_item",
+  "en": "New Map File"
+ },
+ {
+  "key": "subghz_remote|Set Default",
+  "app": "subghz_remote",
+  "func": "submenu_add_item",
+  "en": "Set Default"
+ },
+ {
+  "key": "subghz_remote|Clear Default",
+  "app": "subghz_remote",
+  "func": "submenu_add_item",
+  "en": "Clear Default"
+ },
+ {
+  "key": "subghz_remote|Edit",
+  "app": "subghz_remote",
+  "func": "elements_button_center",
+  "en": "Edit"
+ },
+ {
+  "key": "subghz_remote|Save",
+  "app": "subghz_remote",
+  "func": "elements_button_right",
+  "en": "Save"
+ },
+ {
+  "key": "subghz_remote|UP",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "UP"
+ },
+ {
+  "key": "subghz_remote|DOWN",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "DOWN"
+ },
+ {
+  "key": "subghz_remote|LEFT",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "LEFT"
+ },
+ {
+  "key": "subghz_remote|RIGHT",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "RIGHT"
+ },
+ {
+  "key": "subghz_remote|OK",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "OK"
+ },
+ {
+  "key": "subghz_remote|Empty label",
+  "app": "subghz_remote",
+  "func": "elements_text_box",
+  "en": "Empty label"
+ },
+ {
+  "key": "subghz_remote|Button not set",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "Button not set"
+ },
+ {
+  "key": "subghz_remote|ERR:",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "ERR:"
+ },
+ {
+  "key": "subghz_remote|File not found",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str",
+  "en": "File not found"
+ },
+ {
+  "key": "subghz_remote|Preview",
+  "app": "subghz_remote",
+  "func": "canvas_draw_str_aligned",
+  "en": "Preview"
+ },
+ {
+  "key": "subghz_scheduler|Interval:",
+  "app": "subghz_scheduler",
+  "func": "variable_item_list_add",
+  "en": "Interval:"
+ },
+ {
+  "key": "subghz_scheduler|Timing:",
+  "app": "subghz_scheduler",
+  "func": "variable_item_list_add",
+  "en": "Timing:"
+ },
+ {
+  "key": "subghz_scheduler|Repeats:",
+  "app": "subghz_scheduler",
+  "func": "variable_item_list_add",
+  "en": "Repeats:"
+ },
+ {
+  "key": "subghz_scheduler|Mode:",
+  "app": "subghz_scheduler",
+  "func": "variable_item_list_add",
+  "en": "Mode:"
+ },
+ {
+  "key": "subghz_scheduler|TX Delay:",
+  "app": "subghz_scheduler",
+  "func": "variable_item_list_add",
+  "en": "TX Delay:"
+ },
+ {
+  "key": "subghz_scheduler|Select File",
+  "app": "subghz_scheduler",
+  "func": "variable_item_list_add",
+  "en": "Select File"
+ },
+ {
+  "key": "subghz_scheduler|[Single]",
+  "app": "subghz_scheduler",
+  "func": "variable_item_set_current_value_text",
+  "en": "[Single]"
+ },
+ {
+  "key": "subghz_scheduler|Start",
+  "app": "subghz_scheduler",
+  "func": "variable_item_list_add",
+  "en": "Start"
+ },
+ {
+  "key": "subghz_scheduler|File: ",
+  "app": "subghz_scheduler",
+  "func": "canvas_draw_str_aligned",
+  "en": "File: "
+ },
+ {
+  "key": "subghz_scheduler|Next TX: ",
+  "app": "subghz_scheduler",
+  "func": "canvas_draw_str_aligned",
+  "en": "Next TX: "
+ },
+ {
+  "key": "swd_probe|SWD Probe",
+  "app": "swd_probe",
+  "func": "dialog_message_set_header",
+  "en": "SWD Probe"
+ },
+ {
+  "key": "swd_probe|Abort",
+  "app": "swd_probe",
+  "func": "dialog_message_set_buttons",
+  "en": "Abort"
+ },
+ {
+  "key": "swd_probe|Ok",
+  "app": "swd_probe",
+  "func": "dialog_message_set_buttons",
+  "en": "Ok"
+ },
+ {
+  "key": "swd_probe|Back",
+  "app": "swd_probe",
+  "func": "dialog_message_set_buttons",
+  "en": "Back"
+ },
+ {
+  "key": "swd_probe|Retry",
+  "app": "swd_probe",
+  "func": "dialog_message_set_buttons",
+  "en": "Retry"
+ },
+ {
+  "key": "swd_probe|Searching",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Searching"
+ },
+ {
+  "key": "swd_probe|Connect GND with target GND",
+  "app": "swd_probe",
+  "func": "canvas_draw_str",
+  "en": "Connect GND with target GND"
+ },
+ {
+  "key": "swd_probe|and any two GPIOs with pads",
+  "app": "swd_probe",
+  "func": "canvas_draw_str",
+  "en": "and any two GPIOs with pads"
+ },
+ {
+  "key": "swd_probe|you want to check for SWD",
+  "app": "swd_probe",
+  "func": "canvas_draw_str",
+  "en": "you want to check for SWD"
+ },
+ {
+  "key": "swd_probe|Autoexec Script",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Autoexec Script"
+ },
+ {
+  "key": "swd_probe|Clear",
+  "app": "swd_probe",
+  "func": "canvas_draw_str",
+  "en": "Clear"
+ },
+ {
+  "key": "swd_probe|Choose",
+  "app": "swd_probe",
+  "func": "canvas_draw_str",
+  "en": "Choose"
+ },
+ {
+  "key": "swd_probe|Script",
+  "app": "swd_probe",
+  "func": "elements_button_left",
+  "en": "Script"
+ },
+ {
+  "key": "swd_probe|DP Regs",
+  "app": "swd_probe",
+  "func": "elements_button_right",
+  "en": "DP Regs"
+ },
+ {
+  "key": "swd_probe|DP Registers",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "DP Registers"
+ },
+ {
+  "key": "swd_probe|Scan",
+  "app": "swd_probe",
+  "func": "elements_button_left",
+  "en": "Scan"
+ },
+ {
+  "key": "swd_probe|DPID",
+  "app": "swd_probe",
+  "func": "elements_button_right",
+  "en": "DPID"
+ },
+ {
+  "key": "swd_probe|DP ID Register",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "DP ID Register"
+ },
+ {
+  "key": "swd_probe|APs",
+  "app": "swd_probe",
+  "func": "elements_button_right",
+  "en": "APs"
+ },
+ {
+  "key": "swd_probe|AP Menu",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "AP Menu"
+ },
+ {
+  "key": "swd_probe|Show",
+  "app": "swd_probe",
+  "func": "elements_button_center",
+  "en": "Show"
+ },
+ {
+  "key": "swd_probe|CoreS.",
+  "app": "swd_probe",
+  "func": "elements_button_right",
+  "en": "CoreS."
+ },
+ {
+  "key": "swd_probe|Hex dump",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Hex dump"
+ },
+ {
+  "key": "swd_probe|Addr:",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Addr:"
+ },
+ {
+  "key": "swd_probe|Coresight",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Coresight"
+ },
+ {
+  "key": "swd_probe|Enter",
+  "app": "swd_probe",
+  "func": "elements_button_center",
+  "en": "Enter"
+ },
+ {
+  "key": "swd_probe|Prev",
+  "app": "swd_probe",
+  "func": "elements_button_left",
+  "en": "Prev"
+ },
+ {
+  "key": "swd_probe|Status:",
+  "app": "swd_probe",
+  "func": "canvas_draw_str_aligned",
+  "en": "Status:"
+ },
+ {
+  "key": "t5577_multiwriter|Exit",
+  "app": "t5577_multiwriter",
+  "func": "widget_add_button_element",
+  "en": "Exit"
+ },
+ {
+  "key": "t5577_multiwriter|Stay",
+  "app": "t5577_multiwriter",
+  "func": "widget_add_button_element",
+  "en": "Stay"
+ },
+ {
+  "key": "t5577_multiwriter|Exit to RFID Menu?",
+  "app": "t5577_multiwriter",
+  "func": "widget_add_string_element",
+  "en": "Exit to RFID Menu?"
+ },
+ {
+  "key": "t5577_multiwriter|All unsaved data will be lost!",
+  "app": "t5577_multiwriter",
+  "func": "widget_add_string_element",
+  "en": "All unsaved data will be lost!"
+ },
+ {
+  "key": "t5577_multiwriter|Write first key",
+  "app": "t5577_multiwriter",
+  "func": "submenu_add_item",
+  "en": "Write first key"
+ },
+ {
+  "key": "t5577_multiwriter|Write second key",
+  "app": "t5577_multiwriter",
+  "func": "submenu_add_item",
+  "en": "Write second key"
+ },
+ {
+  "key": "t5577_multiwriter|Write third key",
+  "app": "t5577_multiwriter",
+  "func": "submenu_add_item",
+  "en": "Write third key"
+ },
+ {
+  "key": "t5577_multiwriter|Writing",
+  "app": "t5577_multiwriter",
+  "func": "popup_set_header",
+  "en": "Writing"
+ },
+ {
+  "key": "t5577_multiwriter|Error",
+  "app": "t5577_multiwriter",
+  "func": "popup_set_header",
+  "en": "Error"
+ },
+ {
+  "key": "t5577_multiwriter|This protocol\\ncannot be written",
+  "app": "t5577_multiwriter",
+  "func": "popup_set_text",
+  "en": "This protocol\\ncannot be written"
+ },
+ {
+  "key": "t5577_multiwriter|Still trying to write...",
+  "app": "t5577_multiwriter",
+  "func": "popup_set_header",
+  "en": "Still trying to write..."
+ },
+ {
+  "key": "t5577_multiwriter|Make sure this\\ncard is writable\\nand not\\nprotected.",
+  "app": "t5577_multiwriter",
+  "func": "popup_set_text",
+  "en": "Make sure this\\ncard is writable\\nand not\\nprotected."
+ },
+ {
+  "key": "t5577_multiwriter|Successfully\\nwritten!",
+  "app": "t5577_multiwriter",
+  "func": "popup_set_header",
+  "en": "Successfully\\nwritten!"
+ },
+ {
+  "key": "t5577_raw_writer|Writing",
+  "app": "t5577_raw_writer",
+  "func": "canvas_draw_str_aligned",
+  "en": "Writing"
+ },
+ {
+  "key": "t5577_raw_writer|Hold card next",
+  "app": "t5577_raw_writer",
+  "func": "canvas_draw_str_aligned",
+  "en": "Hold card next"
+ },
+ {
+  "key": "t5577_raw_writer|to Flipper's back",
+  "app": "t5577_raw_writer",
+  "func": "canvas_draw_str_aligned",
+  "en": "to Flipper's back"
+ },
+ {
+  "key": "t5577_raw_writer|Finished!",
+  "app": "t5577_raw_writer",
+  "func": "canvas_draw_str",
+  "en": "Finished!"
+ },
+ {
+  "key": "t5577_raw_writer|Write",
+  "app": "t5577_raw_writer",
+  "func": "submenu_add_item",
+  "en": "Write"
+ },
+ {
+  "key": "t5577_raw_writer|Config",
+  "app": "t5577_raw_writer",
+  "func": "submenu_add_item",
+  "en": "Config"
+ },
+ {
+  "key": "t5577_raw_writer|Save",
+  "app": "t5577_raw_writer",
+  "func": "submenu_add_item",
+  "en": "Save"
+ },
+ {
+  "key": "t5577_raw_writer|Load",
+  "app": "t5577_raw_writer",
+  "func": "submenu_add_item",
+  "en": "Load"
+ },
+ {
+  "key": "t5577_raw_writer|About",
+  "app": "t5577_raw_writer",
+  "func": "submenu_add_item",
+  "en": "About"
+ },
+ {
+  "key": "t5577_raw_writer|T5577 Raw Writer v1.2\\n\\nAuthor: @Torron\\n\\nGithub: https://github.com/zinongli/T5577_Raw_Writer",
+  "app": "t5577_raw_writer",
+  "func": "widget_add_text_scroll_element",
+  "en": "T5577 Raw Writer v1.2\\n\\nAuthor: @Torron\\n\\nGithub: https://github.com/zinongli/T5577_Raw_Writer"
+ },
+ {
+  "key": "t_rex_runner|You lost :c",
+  "app": "t_rex_runner",
+  "func": "canvas_draw_str_aligned",
+  "en": "You lost :c"
+ },
+ {
+  "key": "tama_p1|Menu",
+  "app": "tama_p1",
+  "func": "canvas_draw_str_aligned",
+  "en": "Menu"
+ },
+ {
+  "key": "tama_p1|Layout: Landscape (small)",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Layout: Landscape (small)"
+ },
+ {
+  "key": "tama_p1|Layout: Landscape (big)",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Layout: Landscape (big)"
+ },
+ {
+  "key": "tama_p1|Layout: Landscape (full)",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Layout: Landscape (full)"
+ },
+ {
+  "key": "tama_p1|Layout: Portrait =>",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Layout: Portrait =>"
+ },
+ {
+  "key": "tama_p1|Layout: Portrait <=",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Layout: Portrait <="
+ },
+ {
+  "key": "tama_p1|Layout: ???",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Layout: ???"
+ },
+ {
+  "key": "tama_p1|Speed: 1x",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Speed: 1x"
+ },
+ {
+  "key": "tama_p1|Speed:  2x",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Speed:  2x"
+ },
+ {
+  "key": "tama_p1|Speed:   4x (max)",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Speed:   4x (max)"
+ },
+ {
+  "key": "tama_p1|Speed ??x",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Speed ??x"
+ },
+ {
+  "key": "tama_p1|A+C",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "A+C"
+ },
+ {
+  "key": "tama_p1|A",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "A"
+ },
+ {
+  "key": "tama_p1|B",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "B"
+ },
+ {
+  "key": "tama_p1|C",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "C"
+ },
+ {
+  "key": "tama_p1|Close",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Close"
+ },
+ {
+  "key": "tama_p1|Save",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Save"
+ },
+ {
+  "key": "tama_p1|Save & Exit",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Save & Exit"
+ },
+ {
+  "key": "tama_p1|No ROM",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "No ROM"
+ },
+ {
+  "key": "tama_p1|Halted",
+  "app": "tama_p1",
+  "func": "canvas_draw_str",
+  "en": "Halted"
+ },
+ {
+  "key": "tanks|Single",
+  "app": "tanks",
+  "func": "canvas_draw_str_aligned",
+  "en": "Single"
+ },
+ {
+  "key": "tanks|Co-op S",
+  "app": "tanks",
+  "func": "canvas_draw_str_aligned",
+  "en": "Co-op S"
+ },
+ {
+  "key": "tanks|Co-op C",
+  "app": "tanks",
+  "func": "canvas_draw_str_aligned",
+  "en": "Co-op C"
+ },
+ {
+  "key": "tanks|You win!",
+  "app": "tanks",
+  "func": "canvas_draw_str",
+  "en": "You win!"
+ },
+ {
+  "key": "tanks|Game Over",
+  "app": "tanks",
+  "func": "canvas_draw_str",
+  "en": "Game Over"
+ },
+ {
+  "key": "tetris|Game Over",
+  "app": "tetris",
+  "func": "canvas_draw_str",
+  "en": "Game Over"
+ },
+ {
+  "key": "tetris|Paused",
+  "app": "tetris",
+  "func": "canvas_draw_str",
+  "en": "Paused"
+ },
+ {
+  "key": "tetris|hold      to quit",
+  "app": "tetris",
+  "func": "canvas_draw_str",
+  "en": "hold      to quit"
+ },
+ {
+  "key": "text2sam|Input",
+  "app": "text2sam",
+  "func": "text_input_set_header_text",
+  "en": "Input"
+ },
+ {
+  "key": "tictactoe|SCORE",
+  "app": "tictactoe",
+  "func": "canvas_draw_str",
+  "en": "SCORE"
+ },
+ {
+  "key": "tictactoe|X:",
+  "app": "tictactoe",
+  "func": "canvas_draw_str",
+  "en": "X:"
+ },
+ {
+  "key": "tictactoe|O:",
+  "app": "tictactoe",
+  "func": "canvas_draw_str",
+  "en": "O:"
+ },
+ {
+  "key": "tictactoe|Player:",
+  "app": "tictactoe",
+  "func": "canvas_draw_str",
+  "en": "Player:"
+ },
+ {
+  "key": "timelapse|ON",
+  "app": "timelapse",
+  "func": "canvas_draw_str",
+  "en": "ON"
+ },
+ {
+  "key": "timelapse|OFF",
+  "app": "timelapse",
+  "func": "canvas_draw_str",
+  "en": "OFF"
+ },
+ {
+  "key": "timelapse|AUTO",
+  "app": "timelapse",
+  "func": "canvas_draw_str",
+  "en": "AUTO"
+ },
+ {
+  "key": "timelapse|F",
+  "app": "timelapse",
+  "func": "canvas_draw_str",
+  "en": "F"
+ },
+ {
+  "key": "timelapse|S",
+  "app": "timelapse",
+  "func": "canvas_draw_str",
+  "en": "S"
+ },
+ {
+  "key": "tone_gen|Wave Display",
+  "app": "tone_gen",
+  "func": "variable_item_list_add",
+  "en": "Wave Display"
+ },
+ {
+  "key": "tone_gen|Frequency",
+  "app": "tone_gen",
+  "func": "variable_item_list_add",
+  "en": "Frequency"
+ },
+ {
+  "key": "tone_gen|Volume",
+  "app": "tone_gen",
+  "func": "variable_item_list_add",
+  "en": "Volume"
+ },
+ {
+  "key": "tone_gen|Play Tone",
+  "app": "tone_gen",
+  "func": "menu_add_item",
+  "en": "Play Tone"
+ },
+ {
+  "key": "tone_gen|Adjust Tone",
+  "app": "tone_gen",
+  "func": "menu_add_item",
+  "en": "Adjust Tone"
+ }
+]

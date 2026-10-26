@@ -1,0 +1,534 @@
+From 786181056f66da019621244cec7c7f218fc3c714 Mon Sep 17 00:00:00 2001
+From: flipper-momentum-ru <noreply@github.com>
+Date: Mon, 26 Oct 2026 01:18:07 +0100
+Subject: [PATCH] =?UTF-8?q?=D0=98=D0=9A-=D1=83=D0=BD=D0=B8=D0=B2=D0=B5?=
+ =?UTF-8?q?=D1=80=D1=81=D0=B0=D0=BB:=20=D1=81=D0=BE=D1=85=D1=80=D0=B0?=
+ =?UTF-8?q?=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=20=D0=BD=D0=B0=D0=B9=D0=B4=D0=B5?=
+ =?UTF-8?q?=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE=20=D1=81=D0=B8=D0=B3=D0=BD=D0=B0?=
+ =?UTF-8?q?=D0=BB=D0=B0=20(=D0=BF=D0=B5=D1=80=D0=B5=D0=BD=D0=BE=D1=81=20?=
+ =?UTF-8?q?=D0=B8=D0=B7=20Unleashed)?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Добавляет на экран перебора кнопку (вниз) для сохранения текущего сигнала
+как нового пульта или добавления в существующий — порт фишки Unleashed/
+RogueMaster, которой нет в Momentum mntm-012.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+---
+ applications/main/infrared/infrared_app.c     | 15 ++-
+ applications/main/infrared/infrared_app_i.h   | 17 ++++
+ .../common/infrared_scene_universal_common.c  | 42 +++++++++
+ .../common/infrared_scene_universal_common.h  |  5 +
+ .../infrared/scenes/infrared_scene_config.h   |  3 +
+ .../scenes/infrared_scene_universal_save.c    | 92 +++++++++++++++++++
+ .../infrared_scene_universal_save_done.c      | 37 ++++++++
+ .../infrared_scene_universal_save_name.c      | 57 ++++++++++++
+ .../infrared/views/infrared_progress_view.c   |  7 +-
+ .../infrared/views/infrared_progress_view.h   |  1 +
+ lib/infrared/signal/infrared_brute_force.c    | 21 ++++-
+ lib/infrared/signal/infrared_brute_force.h    | 17 ++++
+ targets/f7/api_symbols.csv                    |  2 +
+ 13 files changed, 309 insertions(+), 7 deletions(-)
+ create mode 100644 applications/main/infrared/scenes/infrared_scene_universal_save.c
+ create mode 100644 applications/main/infrared/scenes/infrared_scene_universal_save_done.c
+ create mode 100644 applications/main/infrared/scenes/infrared_scene_universal_save_name.c
+
+diff --git a/applications/main/infrared/infrared_app.c b/applications/main/infrared/infrared_app.c
+index ec180a1..4da2ba2 100644
+--- a/applications/main/infrared/infrared_app.c
++++ b/applications/main/infrared/infrared_app.c
+@@ -102,7 +102,7 @@ static void infrared_rpc_command_callback(const RpcAppSystemEvent* event, void*
+     }
+ }
+ 
+-static void infrared_find_vacant_remote_name(FuriString* name, const char* path) {
++void infrared_find_vacant_remote_name(FuriString* name, const char* path) {
+     Storage* storage = furi_record_open(RECORD_STORAGE);
+ 
+     FuriString* base_path;
+@@ -308,13 +308,14 @@ static void infrared_free(InfraredApp* infrared) {
+     free(infrared);
+ }
+ 
+-InfraredErrorCode infrared_add_remote_with_button(
++InfraredErrorCode infrared_add_named_remote_with_button(
+     const InfraredApp* infrared,
++    const char* remote_name,
+     const char* button_name,
+     const InfraredSignal* signal) {
+     InfraredRemote* remote = infrared->remote;
+ 
+-    FuriString* new_name = furi_string_alloc_set(INFRARED_DEFAULT_REMOTE_NAME);
++    FuriString* new_name = furi_string_alloc_set(remote_name);
+     FuriString* new_path = furi_string_alloc_set(INFRARED_APP_FOLDER);
+ 
+     infrared_find_vacant_remote_name(new_name, furi_string_get_cstr(new_path));
+@@ -336,6 +337,14 @@ InfraredErrorCode infrared_add_remote_with_button(
+     return error;
+ }
+ 
++InfraredErrorCode infrared_add_remote_with_button(
++    const InfraredApp* infrared,
++    const char* button_name,
++    const InfraredSignal* signal) {
++    return infrared_add_named_remote_with_button(
++        infrared, INFRARED_DEFAULT_REMOTE_NAME, button_name, signal);
++}
++
+ InfraredErrorCode
+     infrared_rename_current_remote(const InfraredApp* infrared, const char* new_name) {
+     InfraredRemote* remote = infrared->remote;
+diff --git a/applications/main/infrared/infrared_app_i.h b/applications/main/infrared/infrared_app_i.h
+index 41906df..29bd2e4 100644
+--- a/applications/main/infrared/infrared_app_i.h
++++ b/applications/main/infrared/infrared_app_i.h
+@@ -189,6 +189,23 @@ InfraredErrorCode infrared_add_remote_with_button(
+     const char* name,
+     const InfraredSignal* signal);
+ 
++/**
++ * @brief Create a new remote with a given name and a single button, saving it to a file.
++ *
++ * Like infrared_add_remote_with_button(), but the remote file name is taken from remote_name
++ * (collisions are resolved by appending a number). Used by the universal-remote save flow.
++ */
++InfraredErrorCode infrared_add_named_remote_with_button(
++    const InfraredApp* infrared,
++    const char* remote_name,
++    const char* button_name,
++    const InfraredSignal* signal);
++
++/**
++ * @brief Pick a free remote file name in the given folder (e.g. Remote, Remote1, ...).
++ */
++void infrared_find_vacant_remote_name(FuriString* name, const char* path);
++
+ /**
+  * @brief Rename the currently loaded remote.
+  *
+diff --git a/applications/main/infrared/scenes/common/infrared_scene_universal_common.c b/applications/main/infrared/scenes/common/infrared_scene_universal_common.c
+index 4e5a965..8bde3c3 100644
+--- a/applications/main/infrared/scenes/common/infrared_scene_universal_common.c
++++ b/applications/main/infrared/scenes/common/infrared_scene_universal_common.c
+@@ -131,6 +131,24 @@ static void infrared_scene_universal_common_handle_popup_input(
+         break;
+     }
+ 
++    case InfraredProgressViewInputSave: {
++        InfraredSceneState scene_state = {
++            .packed_value = scene_manager_get_scene_state(scene_manager, scene_id)};
++        // Copy the signal and its name out before leaving: the brute force owns the open
++        // database file, and it is torn down on the way to the save menu.
++        if(infrared_brute_force_load_signal(
++               brute_force, scene_state.signal_index, infrared->current_signal)) {
++            infrared_text_store_set(
++                infrared, 1, "%s", infrared_brute_force_get_current_record_name(brute_force));
++            infrared_brute_force_stop(brute_force);
++            infrared_scene_universal_common_hide_popup(infrared);
++            scene_manager_next_scene(scene_manager, InfraredSceneUniversalSave);
++        } else {
++            infrared_show_error_message(infrared, "Failed to read\nthe signal");
++        }
++        break;
++    }
++
+     default:
+         furi_crash();
+     }
+@@ -213,3 +231,27 @@ void infrared_scene_universal_common_on_exit(void* context) {
+     infrared_brute_force_reset(infrared->brute_force);
+     button_panel_reset(button_panel);
+ }
++
++void infrared_scene_universal_common_return(void* context) {
++    InfraredApp* infrared = context;
++    // Back out of the save flow to whichever universal category the brute force ran in;
++    // it is re-entered anew, so the button panel comes back from the start.
++    static const uint32_t universal_scenes[] = {
++        InfraredSceneUniversalTV,
++        InfraredSceneUniversalAudio,
++        InfraredSceneUniversalProjector,
++        InfraredSceneUniversalLEDs,
++        InfraredSceneUniversalFan,
++        InfraredSceneUniversalAC,
++        InfraredSceneUniversalBluray,
++        InfraredSceneUniversalMonitor,
++        InfraredSceneUniversalDigitalSign,
++        InfraredSceneUniversalFromFile,
++    };
++
++    if(!scene_manager_search_and_switch_to_previous_scene_one_of(
++           infrared->scene_manager, universal_scenes, COUNT_OF(universal_scenes))) {
++        scene_manager_search_and_switch_to_previous_scene(
++            infrared->scene_manager, InfraredSceneUniversal);
++    }
++}
+diff --git a/applications/main/infrared/scenes/common/infrared_scene_universal_common.h b/applications/main/infrared/scenes/common/infrared_scene_universal_common.h
+index 277598e..52bcef7 100644
+--- a/applications/main/infrared/scenes/common/infrared_scene_universal_common.h
++++ b/applications/main/infrared/scenes/common/infrared_scene_universal_common.h
+@@ -6,3 +6,8 @@ void infrared_scene_universal_common_on_enter(void* context);
+ bool infrared_scene_universal_common_on_event(void* context, SceneManagerEvent event);
+ void infrared_scene_universal_common_on_exit(void* context);
+ void infrared_scene_universal_common_item_callback(void* context, uint32_t index, InputType type);
++
++/**
++ * @brief Return from the save flow to the universal category the brute force ran in.
++ */
++void infrared_scene_universal_common_return(void* context);
+diff --git a/applications/main/infrared/scenes/infrared_scene_config.h b/applications/main/infrared/scenes/infrared_scene_config.h
+index 074fc8c..943701c 100644
+--- a/applications/main/infrared/scenes/infrared_scene_config.h
++++ b/applications/main/infrared/scenes/infrared_scene_config.h
+@@ -25,6 +25,9 @@ ADD_SCENE(infrared, universal_bluray, UniversalBluray)
+ ADD_SCENE(infrared, universal_monitor, UniversalMonitor)
+ ADD_SCENE(infrared, universal_digital_sign, UniversalDigitalSign)
+ ADD_SCENE(infrared, universal_from_file, UniversalFromFile)
++ADD_SCENE(infrared, universal_save, UniversalSave)
++ADD_SCENE(infrared, universal_save_name, UniversalSaveName)
++ADD_SCENE(infrared, universal_save_done, UniversalSaveDone)
+ ADD_SCENE(infrared, gpio_settings, GpioSettings)
+ ADD_SCENE(infrared, debug, Debug)
+ ADD_SCENE(infrared, error_databases, ErrorDatabases)
+diff --git a/applications/main/infrared/scenes/infrared_scene_universal_save.c b/applications/main/infrared/scenes/infrared_scene_universal_save.c
+new file mode 100644
+index 0000000..7495ce4
+--- /dev/null
++++ b/applications/main/infrared/scenes/infrared_scene_universal_save.c
+@@ -0,0 +1,92 @@
++#include "../infrared_app_i.h"
++
++#include "common/infrared_scene_universal_common.h"
++
++typedef enum {
++    SubmenuIndexSaveAsNewRemote,
++    SubmenuIndexAddToExistingRemote,
++} SubmenuIndex;
++
++static void infrared_scene_universal_save_submenu_callback(void* context, uint32_t index) {
++    InfraredApp* infrared = context;
++    view_dispatcher_send_custom_event(infrared->view_dispatcher, index);
++}
++
++static void infrared_scene_universal_save_add_to_existing(InfraredApp* infrared) {
++    DialogsFileBrowserOptions browser_options;
++    dialog_file_browser_set_basic_options(&browser_options, INFRARED_APP_EXTENSION, &I_ir_10px);
++    browser_options.base_path = INFRARED_APP_FOLDER;
++
++    // The browser opens at whatever the path holds, and an empty one lands at /ext.
++    if(furi_string_empty(infrared->file_path)) {
++        furi_string_set(infrared->file_path, INFRARED_APP_FOLDER);
++    }
++
++    // Backing out of the browser just puts the user back on this menu.
++    if(!dialog_file_browser_show(
++           infrared->dialogs, infrared->file_path, infrared->file_path, &browser_options)) {
++        return;
++    }
++
++    InfraredErrorCode error =
++        infrared_remote_load(infrared->remote, furi_string_get_cstr(infrared->file_path));
++
++    if(!INFRARED_ERROR_PRESENT(error)) {
++        error = infrared_remote_append_signal(
++            infrared->remote, infrared->current_signal, infrared->text_store[1]);
++    }
++
++    if(INFRARED_ERROR_PRESENT(error)) {
++        infrared_show_error_message(
++            infrared, "Failed to add to\n\"%s\"", furi_string_get_cstr(infrared->file_path));
++    } else {
++        scene_manager_next_scene(infrared->scene_manager, InfraredSceneUniversalSaveDone);
++    }
++}
++
++void infrared_scene_universal_save_on_enter(void* context) {
++    InfraredApp* infrared = context;
++    Submenu* submenu = infrared->submenu;
++
++    // The header is the name of the button being brute forced, which is also the
++    // name the signal will be saved under.
++    submenu_set_header(submenu, infrared->text_store[1]);
++    submenu_add_item(
++        submenu,
++        "Save as New Remote",
++        SubmenuIndexSaveAsNewRemote,
++        infrared_scene_universal_save_submenu_callback,
++        context);
++    submenu_add_item(
++        submenu,
++        "Add to Existing Remote",
++        SubmenuIndexAddToExistingRemote,
++        infrared_scene_universal_save_submenu_callback,
++        context);
++
++    view_dispatcher_switch_to_view(infrared->view_dispatcher, InfraredViewSubmenu);
++}
++
++bool infrared_scene_universal_save_on_event(void* context, SceneManagerEvent event) {
++    InfraredApp* infrared = context;
++    bool consumed = false;
++
++    if(event.type == SceneManagerEventTypeCustom) {
++        if(event.event == SubmenuIndexSaveAsNewRemote) {
++            scene_manager_next_scene(infrared->scene_manager, InfraredSceneUniversalSaveName);
++        } else if(event.event == SubmenuIndexAddToExistingRemote) {
++            infrared_scene_universal_save_add_to_existing(infrared);
++        }
++        consumed = true;
++    } else if(event.type == SceneManagerEventTypeBack) {
++        infrared_scene_universal_common_return(infrared);
++        consumed = true;
++    }
++
++    return consumed;
++}
++
++void infrared_scene_universal_save_on_exit(void* context) {
++    InfraredApp* infrared = context;
++    submenu_reset(infrared->submenu);
++}
+diff --git a/applications/main/infrared/scenes/infrared_scene_universal_save_done.c b/applications/main/infrared/scenes/infrared_scene_universal_save_done.c
+new file mode 100644
+index 0000000..e022e75
+--- /dev/null
++++ b/applications/main/infrared/scenes/infrared_scene_universal_save_done.c
+@@ -0,0 +1,37 @@
++#include "../infrared_app_i.h"
++
++#include "common/infrared_scene_universal_common.h"
++
++void infrared_scene_universal_save_done_on_enter(void* context) {
++    InfraredApp* infrared = context;
++    Popup* popup = infrared->popup;
++
++    popup_set_icon(popup, 36, 5, &I_DolphinSaved_92x58);
++    popup_set_header(popup, "Saved", 15, 19, AlignLeft, AlignBottom);
++    popup_set_callback(popup, infrared_popup_closed_callback);
++    popup_set_context(popup, context);
++    popup_set_timeout(popup, 1500);
++    popup_enable_timeout(popup);
++
++    infrared_play_notification_message(infrared, InfraredNotificationMessageSuccess);
++    view_dispatcher_switch_to_view(infrared->view_dispatcher, InfraredViewPopup);
++}
++
++bool infrared_scene_universal_save_done_on_event(void* context, SceneManagerEvent event) {
++    InfraredApp* infrared = context;
++    bool consumed = false;
++
++    if(event.type == SceneManagerEventTypeCustom) {
++        if(event.event == InfraredCustomEventTypePopupClosed) {
++            infrared_scene_universal_common_return(infrared);
++            consumed = true;
++        }
++    }
++
++    return consumed;
++}
++
++void infrared_scene_universal_save_done_on_exit(void* context) {
++    InfraredApp* infrared = context;
++    popup_reset(infrared->popup);
++}
+diff --git a/applications/main/infrared/scenes/infrared_scene_universal_save_name.c b/applications/main/infrared/scenes/infrared_scene_universal_save_name.c
+new file mode 100644
+index 0000000..cc513c6
+--- /dev/null
++++ b/applications/main/infrared/scenes/infrared_scene_universal_save_name.c
+@@ -0,0 +1,57 @@
++#include "../infrared_app_i.h"
++
++#include <dolphin/dolphin.h>
++
++void infrared_scene_universal_save_name_on_enter(void* context) {
++    InfraredApp* infrared = context;
++    TextInput* text_input = infrared->text_input;
++
++    // Offer the same generated name the learn flow would have picked, so the user can
++    // just confirm it.
++    FuriString* remote_name = furi_string_alloc_set(INFRARED_DEFAULT_REMOTE_NAME);
++    infrared_find_vacant_remote_name(remote_name, INFRARED_APP_FOLDER);
++    infrared_text_store_set(infrared, 0, "%s", furi_string_get_cstr(remote_name));
++    furi_string_free(remote_name);
++
++    text_input_set_header_text(text_input, "Name the remote");
++    text_input_set_result_callback(
++        text_input,
++        infrared_text_input_callback,
++        context,
++        infrared->text_store[0],
++        INFRARED_MAX_REMOTE_NAME_LENGTH,
++        true);
++
++    view_dispatcher_switch_to_view(infrared->view_dispatcher, InfraredViewTextInput);
++}
++
++bool infrared_scene_universal_save_name_on_event(void* context, SceneManagerEvent event) {
++    InfraredApp* infrared = context;
++    bool consumed = false;
++
++    if(event.type == SceneManagerEventTypeCustom) {
++        if(event.event == InfraredCustomEventTypeTextEditDone) {
++            const InfraredErrorCode error = infrared_add_named_remote_with_button(
++                infrared,
++                infrared->text_store[0],
++                infrared->text_store[1],
++                infrared->current_signal);
++
++            if(!INFRARED_ERROR_PRESENT(error)) {
++                dolphin_deed(DolphinDeedIrSave);
++                scene_manager_next_scene(infrared->scene_manager, InfraredSceneUniversalSaveDone);
++            } else {
++                infrared_show_error_message(infrared, "Failed to\ncreate file");
++                scene_manager_previous_scene(infrared->scene_manager);
++            }
++            consumed = true;
++        }
++    }
++
++    return consumed;
++}
++
++void infrared_scene_universal_save_name_on_exit(void* context) {
++    InfraredApp* infrared = context;
++    text_input_reset(infrared->text_input);
++}
+diff --git a/applications/main/infrared/views/infrared_progress_view.c b/applications/main/infrared/views/infrared_progress_view.c
+index 76454b5..7ad95ad 100644
+--- a/applications/main/infrared/views/infrared_progress_view.c
++++ b/applications/main/infrared/views/infrared_progress_view.c
+@@ -62,7 +62,7 @@ static void infrared_progress_view_draw_callback(Canvas* canvas, void* _model) {
+         canvas, x + 33, y + 37, AlignCenter, AlignCenter, progress_string);
+ 
+     uint8_t buttons_x = x + (model->is_paused ? 10 : 14);
+-    uint8_t buttons_y = y + (model->is_paused ? 46 : 50);
++    uint8_t buttons_y = y + (model->is_paused ? 42 : 50);
+ 
+     canvas_draw_icon(canvas, buttons_x + 0, buttons_y + 0, &I_Pin_back_arrow_10x8);
+     canvas_draw_str(canvas, buttons_x + 14, buttons_y + 8, model->is_paused ? "resume" : "stop");
+@@ -74,6 +74,9 @@ static void infrared_progress_view_draw_callback(Canvas* canvas, void* _model) {
+         canvas_draw_icon(canvas, buttons_x + 2, buttons_y + 21, &I_ButtonLeftSmall_3x5);
+         canvas_draw_icon(canvas, buttons_x + 7, buttons_y + 21, &I_ButtonRightSmall_3x5);
+         canvas_draw_str(canvas, buttons_x + 14, buttons_y + 26, "select");
++
++        canvas_draw_icon(canvas, buttons_x + 2, buttons_y + 30, &I_SmallArrowDown_3x5);
++        canvas_draw_str(canvas, buttons_x + 14, buttons_y + 35, "save");
+     }
+ }
+ 
+@@ -128,6 +131,8 @@ bool infrared_progress_view_input_callback(InputEvent* event, void* context) {
+                 else if(event->key == InputKeyOk)
+                     instance->input_callback(
+                         instance->context, InfraredProgressViewInputSendSingle);
++                else if(event->key == InputKeyDown)
++                    instance->input_callback(instance->context, InfraredProgressViewInputSave);
+                 else if(event->key == InputKeyBack)
+                     instance->input_callback(instance->context, InfraredProgressViewInputResume);
+             } else {
+diff --git a/applications/main/infrared/views/infrared_progress_view.h b/applications/main/infrared/views/infrared_progress_view.h
+index c33f1e5..c0064b8 100644
+--- a/applications/main/infrared/views/infrared_progress_view.h
++++ b/applications/main/infrared/views/infrared_progress_view.h
+@@ -20,6 +20,7 @@ typedef enum {
+     InfraredProgressViewInputPreviousSignal,
+     InfraredProgressViewInputNextSignal,
+     InfraredProgressViewInputSendSingle,
++    InfraredProgressViewInputSave,
+ } InfraredProgressViewInput;
+ 
+ /** Callback for input handling */
+diff --git a/lib/infrared/signal/infrared_brute_force.c b/lib/infrared/signal/infrared_brute_force.c
+index 6f094e5..d83e432 100644
+--- a/lib/infrared/signal/infrared_brute_force.c
++++ b/lib/infrared/signal/infrared_brute_force.c
+@@ -232,8 +232,12 @@ void infrared_brute_force_stop(InfraredBruteForce* brute_force) {
+     furi_record_close(RECORD_STORAGE);
+ }
+ 
+-bool infrared_brute_force_send(InfraredBruteForce* brute_force, uint32_t signal_index) {
++bool infrared_brute_force_load_signal(
++    InfraredBruteForce* brute_force,
++    uint32_t signal_index,
++    InfraredSignal* signal) {
+     furi_check(brute_force);
++    furi_check(signal);
+     furi_assert(brute_force->is_started);
+ 
+     if(signal_index >= SignalPositionArray_size(brute_force->current_record.signals)) return false;
+@@ -243,8 +247,19 @@ bool infrared_brute_force_send(InfraredBruteForce* brute_force, uint32_t signal_
+     if(!flipper_format_seek(brute_force->ff, signal_start, FlipperFormatOffsetFromStart))
+         return false;
+ 
+-    if(INFRARED_ERROR_PRESENT(
+-           infrared_signal_read_body(brute_force->current_signal, brute_force->ff)))
++    return !INFRARED_ERROR_PRESENT(infrared_signal_read_body(signal, brute_force->ff));
++}
++
++const char* infrared_brute_force_get_current_record_name(const InfraredBruteForce* brute_force) {
++    furi_check(brute_force);
++    return furi_string_get_cstr(brute_force->current_record_name);
++}
++
++bool infrared_brute_force_send(InfraredBruteForce* brute_force, uint32_t signal_index) {
++    furi_check(brute_force);
++    furi_assert(brute_force->is_started);
++
++    if(!infrared_brute_force_load_signal(brute_force, signal_index, brute_force->current_signal))
+         return false;
+ 
+     infrared_signal_transmit(brute_force->current_signal);
+diff --git a/lib/infrared/signal/infrared_brute_force.h b/lib/infrared/signal/infrared_brute_force.h
+index c114824..e0f2f15 100644
+--- a/lib/infrared/signal/infrared_brute_force.h
++++ b/lib/infrared/signal/infrared_brute_force.h
+@@ -10,6 +10,8 @@
+ 
+ #include <stdint.h>
+ #include <stdbool.h>
++
++#include "infrared_signal.h"
+ #include <stddef.h>
+ #include "infrared_error_code.h"
+ 
+@@ -115,6 +117,21 @@ void infrared_brute_force_stop(InfraredBruteForce* brute_force);
+  */
+ bool infrared_brute_force_send(InfraredBruteForce* brute_force, uint32_t signal_index);
+ 
++/**
++ * @brief Load a single signal from the current category into an InfraredSignal.
++ *
++ * Unlike _send(), this does not transmit — used to copy the found signal out for saving.
++ */
++bool infrared_brute_force_load_signal(
++    InfraredBruteForce* brute_force,
++    uint32_t signal_index,
++    InfraredSignal* signal);
++
++/**
++ * @brief Get the name of the category (button) currently being brute forced.
++ */
++const char* infrared_brute_force_get_current_record_name(const InfraredBruteForce* brute_force);
++
+ /**
+  * @brief Add a signal category to an InfraredBruteForce instance's dictionary.
+  *
+diff --git a/targets/f7/api_symbols.csv b/targets/f7/api_symbols.csv
+index 0179b6a..b913d9c 100644
+--- a/targets/f7/api_symbols.csv
++++ b/targets/f7/api_symbols.csv
+@@ -2158,7 +2158,9 @@ Function,-,infrared_brute_force_calculate_messages_ex,InfraredErrorCode,"Infrare
+ Function,-,infrared_brute_force_free,void,InfraredBruteForce*
+ Function,-,infrared_brute_force_get_button_count,size_t,const InfraredBruteForce*
+ Function,-,infrared_brute_force_get_button_name,const char*,"const InfraredBruteForce*, size_t"
++Function,-,infrared_brute_force_get_current_record_name,const char*,const InfraredBruteForce*
+ Function,-,infrared_brute_force_is_started,_Bool,const InfraredBruteForce*
++Function,-,infrared_brute_force_load_signal,_Bool,"InfraredBruteForce*, uint32_t, InfraredSignal*"
+ Function,-,infrared_brute_force_reset,void,InfraredBruteForce*
+ Function,-,infrared_brute_force_send,_Bool,"InfraredBruteForce*, uint32_t"
+ Function,-,infrared_brute_force_set_db_filename,void,"InfraredBruteForce*, const char*"
+-- 
+2.54.0.windows.1
+
