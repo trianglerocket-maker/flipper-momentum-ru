@@ -8,8 +8,14 @@
 > English: a full Russian (Cyrillic) UI translation of the Momentum `mntm-012` Flipper Zero
 > firmware — ready-to-flash build in **Releases**, plus the scripts to reproduce it on your own.
 
-На экране всё по-русски — [скриншоты/описание ниже](#что-переведено). На момент публикации
-рабочего русского перевода Flipper в открытом доступе не нашлось, так что это, похоже, первый.
+На момент публикации рабочего русского перевода Flipper в открытом доступе не нашлось,
+так что это, похоже, первый.
+
+### Как это выглядит
+
+Главное меню и настройки — настоящими шрифтами прошивки, в цветах экрана Flipper:
+
+<img src="screenshots/01_glavnoe_menu.png" width="360"> <img src="screenshots/02_nastroyki.png" width="360">
 
 ---
 
@@ -65,6 +71,12 @@ cd ../momentum-firmware
 
 `bmo-theme/` — тема с мордочками BMO (Бимо) из «Время приключений»: 9 анимаций главного
 экрана, движения сверены с мультфильмом, монохром 128×64.
+
+<img src="screenshots/bmo_faces.gif" width="420">
+
+Портреты для паспорта (доволен / обычный / расстроен):
+
+<img src="screenshots/bmo_passport.png" width="420">
 
 - `bmo-theme/BMO_Faces/` — готовый набор. Скопировать в `SD/asset_packs/` на карте,
   затем на приборе: Настройки Momentum → Интерфейс → Графика → Тема → BMO_Faces.
