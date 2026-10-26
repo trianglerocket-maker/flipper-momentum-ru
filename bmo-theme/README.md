@@ -21,4 +21,6 @@ BMO_happy, BMO_laugh, BMO_smile, BMO_smirk, BMO_hmm, BMO_hng, BMO_oo, BMO_yawn, 
 (`make_bmo_anims.py`, `make_bmo_passport.py`): можно перерисовать кадры и собрать заново.
 Нужен Python 3 с `pillow`.
 
-BMO — персонаж Cartoon Network; тема фанатская, некоммерческая.
+**Тема авторская** — все мордочки и портреты нарисованы с нуля специально для этого проекта,
+не взяты из других наборов. BMO — персонаж «Adventure Time» (Cartoon Network);
+тема фанатская, некоммерческая.

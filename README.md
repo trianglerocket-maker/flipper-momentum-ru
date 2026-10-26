@@ -15,7 +15,7 @@
 
 Главное меню и настройки — настоящими шрифтами прошивки, в цветах экрана Flipper:
 
-<img src="screenshots/01_glavnoe_menu.png" width="360"> <img src="screenshots/02_nastroyki.png" width="360">
+<img src="screenshots/01_menu_ik.png" width="360"> <img src="screenshots/02_nastroyki.png" width="360">
 
 ---
 
@@ -69,7 +69,8 @@ cd ../momentum-firmware
 
 ## Тема BMO (бонус)
 
-`bmo-theme/` — тема с мордочками BMO (Бимо) из «Время приключений»: 9 анимаций главного
+`bmo-theme/` — **авторская тема**: мордочки BMO (Бимо) из «Время приключений», нарисованные
+с нуля специально для этого проекта (не взяты из других наборов). 9 анимаций главного
 экрана, движения сверены с мультфильмом, монохром 128×64.
 
 <img src="screenshots/bmo_faces.gif" width="420">
